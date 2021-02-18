@@ -32,7 +32,7 @@ namespace PasswordHashingLibrary.Helper.PasswordHasher
         /// <param name="storedHash">hash of the password string</param>
         /// <param name="storedSalt">salt of the password string</param>
         /// <returns></returns>
-        private static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
+        public static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
         {
             if (password == null) throw new ArgumentNullException("password");
             if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Value cannot be empty or whitespace only string.",
